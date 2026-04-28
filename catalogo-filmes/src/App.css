@@ -1,0 +1,147 @@
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f13;
+  color: #e8e8f0;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── StatusBar ── */
+.statusbar {
+  background: #1a1a2e;
+  border-bottom: 2px solid #e50914;
+  padding: 0.75rem 1.5rem;
+}
+.statusbar__message {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+/* ── Main ── */
+.main {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+/* ── Banner ── */
+.banner {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  height: 200px;
+}
+.banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 50%, transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem 1.5rem;
+}
+.banner__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+.banner__subtitle {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.25rem;
+}
+
+/* ── Form ── */
+.form-section { margin-bottom: 2.5rem; }
+.form-section__heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e50914;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.movie-form {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.movie-form__input {
+  flex: 1;
+  min-width: 160px;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1c1c28;
+  color: #e8e8f0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.movie-form__input:focus { border-color: #e50914; }
+.movie-form__btn {
+  padding: 0.65rem 1.4rem;
+  background: #e50914;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.movie-form__btn:hover { background: #b0060f; }
+
+/* ── Movie List ── */
+.movie-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+.movie-list__empty { color: #888; font-style: italic; }
+.movie-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c1c28;
+  border: 1px solid #2a2a3a;
+  border-radius: 10px;
+  padding: 0.9rem 1.25rem;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.movie-card:hover { border-color: #e50914; transform: translateX(4px); }
+.movie-card__title { font-weight: 600; font-size: 1rem; }
+.movie-card__genre {
+  font-size: 0.8rem;
+  background: #2a0a0d;
+  color: #e50914;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ── Footer ── */
+.footer {
+  background: #1a1a2e;
+  border-top: 1px solid #2a2a3a;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
